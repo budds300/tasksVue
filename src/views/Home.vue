@@ -1,6 +1,6 @@
 <template>
    
-    <div class="" v-show="showTask">
+    <div class="" v-show="showTask" >
       <AddTask @add-task="addTask"/>
     </div>
     <TaskS @toggle-reminder="toggleReminder" @delete-task="deleteTask" :tasks="tasks"/>
@@ -22,7 +22,7 @@ export default {
    
   },
   props:{
-    showAddTask:Boolean
+    showTask:Boolean
   },
   data(){
     return{

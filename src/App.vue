@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <Header @toggle-add-task="showButton" :showAddTask="showTask" />
     <img alt="Vue logo" src="./assets/logo.png">
+    <HeadeR @toggle-add-task="showButton" :showAddTask="showTask" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->   
-  <router-view :showAddTask="showTask"></router-view>
+  <router-view :showTask="showTask"></router-view>
   <FooterS/>
   </div>
 </template>
@@ -11,7 +11,7 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 
-import Header from './components/triesx.vue'
+import HeadeR from './components/triesx.vue'
 
 import FooterS from './components/footer.vue'
 
@@ -19,13 +19,12 @@ export default {
   name: 'App',
   components: {
     // HelloWorld,
-    Header,
+    HeadeR,
     FooterS
   },
   data(){
     return{
-      tasks:[],
-      showTask:false,
+      showTask:true,
  
     }
   },

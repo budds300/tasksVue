@@ -1,15 +1,17 @@
 <template>
-    <button @click="$emit('button-click')" :style="{background:color}">
+ <button @click="$emit('button-click')" :class="btn" :style="{background:color}">
        {{ text }}
-    </button>
+    </button>  
+<p></p>   
 </template>
 
 <script>
 export default{
-    name:'ButtonS',
+    name:'ButtoN',
     props:{
         text:String,
         color:String,
+         btn:String
 
     },
     methods:{
@@ -19,9 +21,5 @@ export default{
 </script>
 
 <style scoped> 
-button{
-    padding: 10px;
-    color: white;
-    
-}
+
 </style>

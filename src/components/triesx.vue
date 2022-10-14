@@ -1,20 +1,19 @@
 <template>
   <header>
-    <Button v-show="homePage" @button-click="$emit('toggle-add-task')" :class="showAddTask?'btn btn-danger':'btn btn-success'" :text="showAddTask?'Close':'Add Task'"/>
-    <h1>
-       {{  title }}
-    </h1>
+    <!-- <ButtoN/> -->
+    <ButtoN v-show="homePage" @button-click="$emit('toggle-add-task')"  :btn="showAddTask?'btn btn-danger':'btn btn-success'" :text="showAddTask?'Close':'Add Task'"/>
   </header>  
 </template>
     
 <script>
-import Button from './button.vue'
+import ButtoN from './button.vue'
+
+
 export default{
-    name:'HeaderOne',
+  name:'HeadeR',
     components:{
-        Button
-        
-    },
+    ButtoN,  
+},
     props:{
         title:String,
         showAddTask:Boolean,
